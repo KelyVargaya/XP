@@ -299,7 +299,6 @@ body {
       background-size: 200px 200px;
       animation: zoom 15s infinite;
       opacity: 0;
-      background-attachment: fixed;
   }
   
   #color-cielo .circle:nth-child(1) {
