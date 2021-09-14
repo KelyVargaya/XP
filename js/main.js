@@ -17,10 +17,10 @@
       var $mobile_nav = $('.nav-menu').clone().prop({
         class: 'mobile-nav d-lg-none'
       });
-      $('body').append($mobile_nav);
+     /* $('body').append($mobile_nav);
       $('.mobile-nav').append('<div class="logo-menu"><img src="img/logo-color.png" class="img-fluid"></div>')
       $('#menu-mobil').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
-      $('body').append('<div class="close-button-menu"><button type="button" class="mobile-nav-toggle"><i class="icofont-close"></i></button></div>');
+      $('body').append('<div class="close-button-menu"><button type="button" class="mobile-nav-toggle"><i class="icofont-close"></i></button></div>');*/
   
       $(document).on('click', '.mobile-nav-toggle', function(e) {
         $('body').toggleClass('mobile-nav-active');
