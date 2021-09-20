@@ -17,10 +17,6 @@
       var $mobile_nav = $('.nav-menu').clone().prop({
         class: 'mobile-nav d-lg-none'
       });
-     /* $('body').append($mobile_nav);
-      $('.mobile-nav').append('<div class="logo-menu"><img src="img/logo-color.png" class="img-fluid"></div>')
-      $('#menu-mobil').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
-      $('body').append('<div class="close-button-menu"><button type="button" class="mobile-nav-toggle"><i class="icofont-close"></i></button></div>');*/
   
       $(document).on('click', '.mobile-nav-toggle', function(e) {
         $('body').toggleClass('mobile-nav-active');
@@ -46,8 +42,6 @@
     } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
       $(".mobile-nav, .mobile-nav-toggle").hide();
     }
-
-  
     // Animaciones
     function aos_init() {
       AOS.init({
@@ -58,5 +52,28 @@
     $(window).on('load', function() {
       aos_init();
     });
+
+    // Pregunas seccion
+
+    
+      $(".panel-preguntas").hide();
+      $("#etapa-1").show();
+
+  
+  $(document).on('click', "#siguiente", function(){
+      var pageCount = $(".panel-preguntas").length;
+      var position = $(".panel-preguntas:visible").data('position');
+      $(".panel-preguntas:visible").hide();
+      if(position < pageCount){
+          $("#etapa-" + (position+1)).show();
+      }
+      else
+      {
+         
+          $("#etapa-1").show();
+
+      }
+  });
+ 
   
   })(jQuery);
