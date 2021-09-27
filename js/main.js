@@ -75,5 +75,35 @@
       }
   });
  
+  // Control animacion nave
+  var $body=$("#hero"),
+	$heroA=$("#nave"),
+	$heroB=$("#fondo-azul");
+
+	TweenMax.set( $heroA, { transformStyle: 'preserve-3d'  });
+  TweenMax.set( $heroB, { transformStyle: 'preserve-3d'  });
+	
+	$body.mousemove(function(e) {
+		
+		var sxPos =  e.pageX / $body.width()  * 100 - 50;
+		var syPos =  e.pageY / $body.height() * 100 - 50;
+    
+		TweenMax.to( $heroA, 1, { rotationY: 0.01 * sxPos, rotationX: 0.02 * syPos, rotationZ: 0, transformPerspective:500, transformOrigin:'center center' });
+    TweenMax.to( $heroB, 1, { rotationY: -0.025 * sxPos, rotationX: -0.02 * syPos, rotationZ: 0, transformPerspective:500, transformOrigin:'center center' });
+	});
   
   })(jQuery);
+
+  /* ----- Control video ----- */
+  function myFunction(){ 
+    var playVideo = document.getElementById('bienvenida');
+    var button = document.getElementById('btn-play');
+
+    if (playVideo.paused) {
+       playVideo.play();
+        button.innerHTML= "<i class='icofont-ui-pause'></i>";
+    } else {
+       button.innerHTML= "<i class='icofont-ui-play'></i>";
+       playVideo.pause();
+    }
+    }; 
