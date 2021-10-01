@@ -1,0 +1,387 @@
+@font-face {
+    font-family: 'proxima_novabold';
+    src: url('../uploads/fonts/nova-bold-webfont.woff2') format('woff2'),
+         url('../uploads/fonts/nova-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  @font-face {
+    font-family: 'masked_hero_demoregular';
+    src: url('../uploads/fonts/masked-hero-webfont.woff2') format('woff2'),
+         url('../uploads/fonts/masked-hero-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  @font-face {
+    font-family: 'robotobold';
+    src: url('../uploads/fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../uploads/fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'robotomedium';
+    src: url('../uploads/fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../uploads/fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'robotoregular';
+    src: url('../uploads/fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../uploads/fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+  #felicitaciones-panel{
+    background-color: #020e26 ;
+    background-image: url(./../img/bg-felicitaciones.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+  .contenido-felicitacion{
+    height: 100vh;
+    z-index: 999999;
+    position: relative;
+    min-height: 580px;
+  }
+.contenido-felicitacion .text-content h1{
+    font-family: 'masked_hero_demoregular';
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 3.2rem;
+    margin-bottom: 19px;
+    color: #ffffff;
+}
+.contenido-felicitacion .text-content p{
+  text-align: center;
+  font-size: 23px;
+  color: #ffffff;
+  line-height: 1.1;
+}
+.contenido-felicitacion .text-content .xplonauta-x{
+  vertical-align: bottom;
+  margin-right: -15px;
+}
+.contenido-felicitacion .img-bot{
+  transform: scale(1.25);
+}
+.left-content{
+  text-align: right;
+}
+.right-content{
+  margin-left: -5%;
+}
+.artefacto-content{
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+
+}
+.artefacto-content .row{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.artefacto-content .img-bot{
+  transform: scale(1.2);
+}
+.artefacto-content .img-artefacto{
+  text-align: center;
+  margin-top: -29px;
+  padding-left: 11%;
+}
+.artefacto-content .img-fondo{
+  width: 100% ;
+}
+.artefacto-content .name-artefacto{
+  margin-left: -15px;
+}
+.artefacto-content .name-artefacto p{
+  font-family: 'masked_hero_demoregular';
+  text-align: center;
+  text-transform: lowercase;
+  margin-left: -16%;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.2;
+  transform: rotate(-4deg);
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.content-btn-bottom{
+  position: relative;
+  margin-bottom: -48px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+.content-btn-bottom .btn-continuar{
+  display: inline-block;
+  background: #ffb32c;
+  padding: 5px 15px 10px;
+  text-decoration: none;
+  color: #0f2533;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+#felicitaciones-panel:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, rgb(47 47 86 / 26%) 0%, rgb(73 31 70 / 40%) 49%, rgb(1 253 54 / 11%) 82%);
+    background-size: 200%;
+    background-size: 200%;
+    animation: aurora 6s infinite;
+}
+.compartir{
+  position: relative;
+}
+.compartir .items-general{
+  line-height: 0;
+  color: #41d8cd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #41d8cd;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.compartir .items-general i{
+  line-height: 40px;
+}
+
+.compartir .items-redes-sociales{
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  top: 48px;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center; 
+  transition: 500ms;
+}
+.compartir .items-general:hover .items-redes-sociales{
+  visibility: visible;
+  transition: 500ms;
+}
+.compartir .items-redes-sociales li{
+  display: inline-block; 
+}
+.compartir .items-redes-sociales li a{
+  text-decoration: none;
+}
+.compartir .items-redes-sociales i{
+  line-height: 35px;
+}
+.compartir .facebook-item{
+  display: inline-block;
+  background: #2372c3;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  font-size: 18px;
+}
+.compartir .instagram-item{
+  display: inline-block;
+  background: #af25b1;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  font-size: 20px;
+  line-height: 0;
+}
+
+  @keyframes aurora {
+    0% {
+        background-position: left top;
+    }
+    25% {
+        background-position: right top;
+    }
+    50% {
+        background-position: right bottom;
+    }
+    75% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: left top;
+    }
+  }
+  #color-cielo, .circle {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #color-cielo .circle {
+    background-image: 
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)), 
+    radial-gradient(1px 1px at 50px 160px, #a52b66, rgba(0,0,0,0)), 
+    radial-gradient(2px 2px at 90px 40px, #054aa7, rgba(0,0,0,0)), 
+    radial-gradient(2px 2px at 5px 10px, #aecea1, rgba(0,0,0,0));
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      animation: zoom 15s infinite;
+      opacity: 0;
+  }
+  
+  #color-cielo .circle:nth-child(1) {
+    background-position: 50% 50%;
+    animation-delay: 0s;
+  }
+  #color-cielo .circle:nth-child(2) {
+    background-position: 20% 60%;
+    animation-delay: 1s;
+  }
+  #color-cielo .circle:nth-child(3) {
+    background-position: -20% -30%;
+    animation-delay: 2s;
+  }
+  #color-cielo .circle:nth-child(4) {
+    background-position: 40% -80%;
+    animation-delay: 3s;
+  }
+  @keyframes zoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+      animation-timing-function: ease-in;
+    } 
+    85% {
+      opacity: 1;
+      transform: scale(1.2);
+      animation-timing-function: linear;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.9);
+    }
+
+  }
+.controles .top-iconos {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    z-index: 9;
+}
+.controles .top-iconos a {
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 2px 6px;
+  color: #ffffff;
+  margin: 0 6px;
+  box-sizing: border-box;
+  font-size: 20px;
+  transition: 300ms;
+}
+.controles{
+  z-index: 9999999;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 23px;
+}
+
+@media (min-width: 1600px){
+  .contenido-felicitacion .text-content h1 {
+    font-size: 3.9rem;
+}
+.contenido-felicitacion .text-content p {
+  font-size: 25px;
+}
+.artefacto-content {
+  max-width: 610px;
+}
+.artefacto-content .name-artefacto p {
+  font-size: 22px;
+}
+}
+@media (max-width: 767px){
+  .contenido-felicitacion .text-content h1 {
+    font-size: 1.52rem;
+  }
+  .xplonauta-x img{
+    width: 38px;
+  }
+  .artefacto-content .name-artefacto p {
+    font-size: 13px;
+  }
+  .content-btn-bottom .btn-continuar {
+    font-size: 20px;
+}
+.contenido-felicitacion .text-content p {
+  font-size: 14px;
+}
+.contenido-felicitacion .text-content .xplonauta-x {
+  vertical-align: bottom;
+  margin-right: -9px;
+}
+.content-btn-bottom {
+  margin-top: 6px;
+}
+.compartir .items-general {
+  width: 28px;
+  height: 28px;
+}
+.compartir .items-general i {
+  line-height: 27px;
+}
+#felicitaciones-panel {
+  padding-top: 10%;
+}
+.contenido-felicitacion {
+  min-height: 300px;
+}
+}
+@media (max-width: 575px){
+  .right-content {
+    margin-left: 0;
+  }
+  .contenido-felicitacion .img-bot {
+    transform: none;
+  }
+  #felicitaciones-panel {
+    padding-top: 25%;
+    padding-bottom: 24%;
+  }
+  .contenido-felicitacion {
+    height: auto !important;
+    margin-bottom: 59px;
+}
+}
