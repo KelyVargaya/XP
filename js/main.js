@@ -92,33 +92,6 @@
     TweenMax.to( $heroB, 1, { rotationY: -0.025 * sxPos, rotationX: -0.02 * syPos, rotationZ: 0, transformPerspective:500, transformOrigin:'center center' });
 	});
   
-
-	let i=2;
-
-	
-		var radius = 200;
-		var fields = $('.itemDot');
-		var container = $('.dotCircle');
-		var width = container.width();
- radius = width/2.5;
- 
-		 var height = container.height();
-		var angle = 0, step = (2*Math.PI) / fields.length;
-		fields.each(function() {
-			var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
-			var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
-			if(window.console) {
-				console.log($(this).text(), x, y);
-			}
-			
-			$(this).css({
-				left: x + 'px',
-				top: y + 'px'
-			});
-			angle += step;
-		});
-		
-
 		var header = $('.marca-planeta-4');
     setTimeout(function() {
       header.addClass('planeta-active');
@@ -139,3 +112,14 @@
        playVideo.pause();
     }
     }; 
+
+    var slider = document.getElementById("paginacion-bot")
+    var min = slider.min
+    var max = slider.max
+    var value = slider.value
+
+slider.style.background = `linear-gradient(to right, #31edea 0%, #31edea ${(value-min)/(max-min)*100}%, rgb(255 255 255 / 0%) ${(value-min)/(max-min)*100}%, rgb(255 255 255 / 0%) 100%)`
+
+slider.oninput = function() {
+  this.style.background = `linear-gradient(to right, #31edea 0%, #31edea ${(this.value-this.min)/(this.max-this.min)*100}%, rgb(255 255 255 / 0%) ${(this.value-this.min)/(this.max-this.min)*100}%, rgb(255 255 255 / 0%) 100%)`
+};
