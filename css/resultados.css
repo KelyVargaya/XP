@@ -413,8 +413,11 @@ span.btn-ver-resultados:before {
     z-index: 2;
     display: block;
 } 
-/* Animacion planetas */
 
+
+
+
+/* ****** Seccion Resultados ****** */
 .resultados-right{
     text-align: center;
 }
@@ -424,66 +427,122 @@ span.btn-ver-resultados:before {
     position: relative;
     display: inline-block;
 }
+
+/* *****DIBUJO DE HEXAGONO****** */
+.content-hexagono {
+    display: inline-block;
+    background: rgb(244 246 253 / 89%);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7091211484593838) 98%, rgba(255,255,255,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7091211484593838) 98%, rgba(255,255,255,1) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7091211484593838) 98%, rgba(255,255,255,1) 100%);
+
+    -webkit-clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
+    clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
+}
+  .content-hexagono:before {
+    content: "";
+    background: rgb(7 38 74 / 90%);
+    position: absolute;
+    top: 3px;
+    display: block;
+    right: 3px;
+    left: 3px;
+    bottom: 5px;
+    z-index: 1;
+
+    -webkit-clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
+    clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
+}
+  .content-hexagono img{
+      opacity: 0;
+  }
+
+
+/* DESPLAZAMIENTOS de cada planeta con su nombre 
+
+---- EL AUMENTAR O REDUCIR NUMEROS VARIA POR LA POSICION DE CADA PLANETA */
+
+.item-planeta.planeta-1{
+    left: 3%;  /* en la posicion restarle 30 */
+    top: -43%;  /* en la posicion restarle 43 */
+}
+.item-planeta.planeta-2{
+    left: 102%;  /* en la posicion aumentarle 5 */
+    top: -7%;    /* en la posicion restarle 21 */
+}
+.item-planeta.planeta-3{
+    left: 105%; /* en la posicion aumentarle 5 */
+    top: 42%;  /* en la posicion restarle 14 */
+}
+.item-planeta.planeta-4{
+    left: 42%;  /* en la posicion restarle 49 */
+    top: 104%; /* en la posicion aumentarle 4 */
+}
+.item-planeta.planeta-5{
+    left: -55%;  /* en la posicion restarle 68 */
+    top: 68%;  /* en la posicion restarle 3 */
+}
+.item-planeta.planeta-6{
+    left: -71%;  /* en la posicion restarle 71 */
+    top: 13%;  /* en la posicion restarle 16 */
+}
+
+/* DESPLAZAMIENTOS DE puntos circulares de cada esquina
+---- Solo se reduce en 2 a cada resultado, las variables no varian porque son del mismo tamaño */
+
+.marca-planeta-1 {
+    left: 31%; /* En la posicion restarle 2 */
+    top: -2%;  /* En la posicion restarle 2 */
+}
+.marca-planeta-2 {
+    left: 95%; /* En la posicion restarle 2 */
+    top: 12%;  /* En la posicion restarle 2 */
+}
+.marca-planeta-3 {
+    left: 98%; /* En la posicion restarle 2 */
+    top: 54%; /* En la posicion restarle 2 */
+}
+.marca-planeta-4 {
+    left: 89%; /* En la posicion restarle 2 */
+    top: 98%; /* En la posicion restarle 2 */
+}
+.marca-planeta-5 {
+    left: 11%; /* En la posicion restarle 2 */
+    top: 69%; /* En la posicion restarle 2 */
+}
+.marca-planeta-6 {
+    left: -2%; /* En la posicion restarle 2 */
+    top: 27%; /* En la posicion restarle 2 */
+}
+
+/* FIN DESPLAZAMIENTOS */
+
+
+
+
+
+/* CONTENEDOR DE PLANETAS ALREDEDOR DEL HEXAGONO*/
 .planetas-circle{
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: block;
     z-index: 4;
 }
-
-span.item-planeta {
+.marca-planeta {
+    width: 11px;
+    height: 11px;
+    background: rgb(255 255 255 / 98%);
+    border-radius: 50%;
     display: block;
     position: absolute;
 }
-
-.item-planeta.planeta-1{
-    top: -44%;
-    left: 7%;
-    animation: planeta1-movimiento 5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 6s;
-    
-}
-.item-planeta.planeta-2{
-    top: -14%;
-    right: -39%;
-    animation: planeta2-movimiento 5s;
-    animation-iteration-count: 1;
-    animation-delay: 8s;
-}
-
-.item-planeta.planeta-3{
-    top: 43%;
-    right: -48%;
-    animation: planeta3-movimiento 5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 10s;
-}
-.item-planeta.planeta-4{
-    bottom: -41%;
-    right: -25%;
-    animation-iteration-count: 1;
-    animation: planeta4-movimiento 14.2s;
-    animation-delay: 2s;
-}
-.item-planeta.planeta-5{
-    bottom: -12%;
-    left: -24%;
-    animation: planeta5-movimiento 5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 2s;
-}
-.item-planeta.planeta-6{
-    left: -49%;
-    top: 13%;
-    animation: planeta6-movimiento 5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 4s;
+.item-planeta {
+    display: block;
+    position: absolute;
+    width: 64%;
 }
 
 .item-planeta.planeta-1:before {
@@ -499,14 +558,19 @@ span.item-planeta {
     filter: blur(33px);
     z-index: 0;
 }
+.item-planeta.planeta-2, .item-planeta.planeta-3{
+    text-align: left;
+}
+.item-planeta.planeta-4, .item-planeta.planeta-5, .item-planeta.planeta-6{
+    text-align: right;
+}
 .item-planeta.planeta-2:after {
     content: "";
     background: radial-gradient(circle, rgb(42 189 228 / 78%) 0%, rgba(255,255,255,0) 100%);
     position: absolute;
     top: 10%;
-    left: 10%;
-    right: 0;
-    width: 63%;
+    left: 0%;
+    width: 60%;
     height: 50%;
     margin: auto;
     filter: blur(33px);
@@ -518,8 +582,7 @@ span.item-planeta {
     position: absolute;
     top: 10%;
     left: 0;
-    right: 10%;
-    width: 63%;
+    width: 47%;
     height: 50%;
     margin: auto;
     filter: blur(33px);
@@ -529,9 +592,8 @@ span.item-planeta {
     content: "";
     background: radial-gradient(circle, rgb(176 10 46 / 49%) 0%, rgba(255,255,255,0) 100%);
     top: 0;
-    left: 0;
     right: 0;
-    width: 100%;
+    width: 64%;
     height: 60%;
     transition: 500ms;
     position: absolute;
@@ -543,9 +605,8 @@ span.item-planeta {
     content: "";
     background: radial-gradient(circle, rgb(181 127 230 / 50%) 0%, rgba(255,255,255,0) 100%);
     top: 0;
-    left: 0;
     right: 0;
-    width: 100%;
+    width: 56%;
     height: 60%;
     transition: 500ms;
     position: absolute;
@@ -571,94 +632,28 @@ span.item-planeta img{
     display: block;
     color: #ffffff;
     font-size: 14px;
-    text-align: left;
     margin-top: 4px;
 }
 .descripcion-planeta strong{
     display: block;
 }
-.planeta-3 .descripcion-planeta{
-    transform: translateX(35%);
-}
-.planeta-2 .descripcion-planeta{
-    transform: translateX(46%);
-}
-.planeta-4 .descripcion-planeta{
-    text-align: right;
-    transform: translateX(-32%);
-}
-.planeta-5 .descripcion-planeta{
-    transform: translate(-17px, -17px);
-}
 
-.content-hexagono {
-    display: inline-block;
-    background: rgb(244 246 253 / 89%);
-    background: -moz-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7091211484593838) 98%, rgba(255,255,255,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7091211484593838) 98%, rgba(255,255,255,1) 100%);
-    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7091211484593838) 98%, rgba(255,255,255,1) 100%);
 
-    -webkit-clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
-    clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
-    animation: polygons 12s infinite;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
-  .content-hexagono:before {
-    content: "";
-    background: rgb(7 38 74 / 90%);
+
+/* ******* CIRCULOS DE CADA ESQUINA HEXAGONO****** */
+.circle-marca {
     position: absolute;
-    top: 3px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: block;
-    right: 3px;
-    left: 3px;
-    bottom: 5px;
-    z-index: 1;
-    -webkit-clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
-    clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 91% 100%, 13% 71%, 0% 29%);
-    animation: polygons 12s infinite;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+    z-index: 3;
 }
-  .content-hexagono img{
-      opacity: 0;
-  }
-  @keyframes polygons {
-
-    17% {
-        -webkit-clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 71% 93%, 9% 82%, 0% 29%);
-        clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 71% 93%, 9% 82%, 0% 29%);
-        box-shadow:0px 0px 1px 10px rgb(147,91,199);
-    }
-    34% {
-      -webkit-clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 71% 94%, 13% 71%, 0% 20%);
-        clip-path: polygon(33% 0%, 97% 14%, 100% 56%, 71% 94%, 13% 71%, 0% 20%);
-
-    }
-    51% {
-      -webkit-clip-path: polygon(25% 0%, 97% 14%, 100% 56%, 71% 94%, 13% 71%, 0% 28%);
-      clip-path: polygon(25% 0%, 97% 14%, 100% 56%, 71% 94%, 13% 71%, 0% 28%);
-
-    }
-    68% {
-        -webkit-clip-path: polygon(33% 0%, 100% 7%, 100% 56%, 71% 94%, 13% 71%, 0% 28%);
-        clip-path: polygon(33% 0%, 100% 7%, 100% 56%, 71% 94%, 13% 71%, 0% 28%);
-    }
-    85% {
-        -webkit-clip-path: polygon(33% 0%, 97% 14%, 99% 66%, 71% 94%, 13% 71%, 0% 28%) ;
-        clip-path: polygon(33% 0%, 97% 14%, 99% 66%, 71% 94%, 13% 71%, 0% 28%);
-       
-    }
-   
-  }
+/* ******* FIN CIRCULOS DE CADA HEXAGONO****** */
 
 
-/*marcas */
-
-
-
+/* ******* PLANETA ACTIVO DEL HEXAGONO**********  */
 .planeta-active{
     -webkit-box-shadow: 0 0 0 0 rgb(255 255 255 / 61%);
     box-shadow: 0 0 0 0 rgb(255 255 255 / 61%);
@@ -671,8 +666,8 @@ span.item-planeta img{
       -ms-transform: scale(0.9);
       -webkit-transform: scale(0.9);
       transform: scale(0.9); 
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
     }
     60% {
       -ms-transform: scale(1);
@@ -680,8 +675,8 @@ span.item-planeta img{
       transform: scale(1);
       -webkit-box-shadow: 0 0 0 50px rgb(255 255 255 / 0%);
       box-shadow: 0 0 0 50px rgb(255 255 255 / 0%);
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
     }
             
     100% {
@@ -690,222 +685,24 @@ span.item-planeta img{
       transform: scale(0.9);
       -webkit-box-shadow: 0 0 0 0  rgb(255 255 255 / 0%);
     box-shadow: 0 0 0 0 rgb(255 255 255 / 0%); 
-     width: 16px;
-    height: 16px;
+     width: 14px;
+    height: 14px;
     } 
 }
 
-.circle-marca {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 3;
-}
 
-.marca-planeta {
-    width: 11px;
-    height: 11px;
-    background: rgb(255 255 255 / 98%);
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-}
-.marca-planeta-1 {
-    top: -2%;
-    left: 32%;
-    animation: circle1-movimiento 4.5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 6s;
-}
-.marca-planeta-2 {
-    top: 11%;
-    right: 2%;
-    animation: circle2-movimiento 4.5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 8s;
-}
-.marca-planeta-3 {
-    right: -2%;
-    bottom: 41%;
-    animation: circle3-movimiento 4.5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 10s;
-}
-.marca-planeta-4 {
-    bottom: -1%;
-    right: 7%;
-    animation: circle4-movimiento 14.2s;
-    animation-delay: 2s;
-}
-.marca-planeta-5 {
-    bottom: 27%;
-    left: 11%;
-    animation: circle5-movimiento 4.5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 2s;
-}
-.marca-planeta-6 {
-    left: -2%;
-    top: 27%;
-    animation: circle6-movimiento 4.5s infinite;
-    animation-iteration-count: 1;
-    animation-delay: 4s;
-}
-
-@keyframes planeta1-movimiento {
-    50% {
-        left: -9%;
-    }
-   70% {
-        left: 7%;
-    }
-}
-@keyframes circle1-movimiento{
-    50% {
-        left: 23%;
-    }
-   80% {
-        left: 32%;
-    }
-}
-@keyframes planeta2-movimiento {
-    50% {
-        right: -47%;
-    }
-   70% {
-        right: -39%;
-    }
-}
-@keyframes circle2-movimiento{
-    50% {
-        top: 5%;
-        right: -2%;
-    }
-   80% {
-    top: 11%;
-    right: 2%;
-    }
-}
-@keyframes planeta3-movimiento {
-    50% {
-        top: 54%;
-    }
-   70% {
-       top: 43%;
-    }
-}
-@keyframes circle3-movimiento{
-    50% {
-        right: -1%;
-        bottom: 32%;
-    }
-   80% {
-    right: -2%;
-    bottom: 41%;
-    }
-}
-@keyframes circle4-movimiento{
-    12% {
-        bottom: 4.5%;
-        right: 27%;
-    }
-    50% {
-        bottom: 4.5%;
-        right: 27%;
-    }
-    70% {
-        bottom: 4.5%;
-        right: 27%;
-    }
-    90% {
-        bottom: -1%;
-        right: 7%;
-    }
-}
-@keyframes planeta4-movimiento {
-    12% {
-        right: -6%;
-    }
-    50% {
-        right: -6%;
-    }
-    70% {
-        right: -6%;
-    }
-    90% {
-        right: -24%;
-    }
-}
-@keyframes circle5-movimiento{
-    50% {
-      
-        bottom: 18%;
-        left: 7%;
-    }
-   80% {
-        bottom: 27%;
-        left: 11%;
-    }
-}
-
-@keyframes planeta5-movimiento {
-    50% {
-      
-        bottom: -20%;
-        left: -33%;
-    }
-   70% {
-        bottom: -12%;
-        left: -24%;
-    }
-}
-@keyframes circle5-movimiento{
-    50% {
-      
-        bottom: 18%;
-        left: 7%;
-    }
-   80% {
-        bottom: 27%;
-        left: 11%;
-    }
-}
-
-@keyframes planeta6-movimiento {
-    50% {
-        left: -48%;
-        top: 0%;
-    }
-   80% {
-        left: -49%;
-        top: 13%;
-    }
-}
-@keyframes circle6-movimiento{
-    50% {
-        top: 18%;
-    }
-   80% {
-        top: 27%;
-    }
-}
 
   @keyframes planeta{
     100% {
-      -ms-transform: rotate(360deg); /* IE 9 */
-      -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+      -ms-transform: rotate(360deg); 
+      -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
   @-webkit-keyframes planeta {
     100% {
-      -ms-transform: rotate(360deg); /* IE 9 */
-      -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */ 
+      -ms-transform: rotate(360deg); 
+      -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
@@ -1063,7 +860,8 @@ span.item-planeta img{
         margin-bottom: 120px;
     }
     span.item-planeta img{
-        max-width: 50px;
+        max-width: 42px;
+        margin-bottom: 2px;
     }
     .content-hexagono img {
         max-width: 185px;
@@ -1071,7 +869,7 @@ span.item-planeta img{
     .descripcion-planeta {
         width: 98%;
         margin: 0 auto;
-        line-height: 1.1;
+        line-height: 1;
         font-size: 10px;
     }
     .marca-planeta {
@@ -1126,5 +924,13 @@ span.item-planeta img{
     #logo-footer {
         max-width: 100px;
         bottom: 2%;
+    }
+  }
+  @media (max-width: 350px) {
+    .item-planeta.planeta-6 .descripcion-planeta{
+        padding-left: 54%;
+    }
+    .descripcion-planeta {
+        line-height: 1;
     }
   }
