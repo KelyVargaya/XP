@@ -67,7 +67,6 @@ body {
     padding: 20px 15px 5px;
     position: fixed;
     left: 0;
-    backdrop-filter: blur(2px);
     width: 100%;
   }
   
@@ -79,7 +78,10 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-  
+  #header .logo a{
+    display: inline-block;
+    backdrop-filter: blur(3px);
+  }
   @media (max-width: 992px) {
     #header {
       padding: 9px 0;
@@ -282,7 +284,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #101c3a;
-    background-image: url("../img/hero-bg.jpg");
+    background-image: url("../img/hero-bg-blue.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -357,11 +359,35 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(45deg, rgb(246 109 44 / 19%) 0%, rgb(105 43 136 / 25%) 49%, rgb(167 255 84 / 11%) 82%);
+    background: linear-gradient(45deg, rgb(246 109 44 / 19%) 0%, rgb(18 155 90 / 13%) 49%, rgb(157 150 36 / 4%) 82%);
     background-size: 200%;
     animation: aurora 6s infinite;
   }
+  .astronauta-x{
+    animation: astronauta 3s ease-in-out infinite alternate-reverse both;
+  }
+  @media (max-width: 768px) and (orientation: landscape) {
+    .astronauta-x img{
+      max-width: 60px;
+    }
+  }
+  @-webkit-keyframes astronauta {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
   
+  @keyframes astronauta {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
   @keyframes aurora {
     0% {
         background-position: left top;
@@ -379,7 +405,17 @@ body {
         background-position: left top;
     }
   }
-
+  @media (max-width: 576px){
+    #hero .container, #hero .container-fluid {
+      padding: 0;
+  }
+    #hero .hero-mb{
+        width: 100%;
+    }
+    .astronauta-x{
+      display: none;
+    }
+  }
 .seccion-xplonauta {
   padding: 110px 0;
   z-index: 2;
