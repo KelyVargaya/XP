@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -22,7 +22,7 @@
     <main id="preguntas-main">
         <div class="controles">
             <div class="top-iconos">
-                <a href="#"><i class="icofont-google-map"></i></a>
+                <a href="#" type="button" data-toggle="modal" data-target="#mapa"><i class="icofont-google-map"></i></a>
                 <a href="#"><i class="icofont-question"></i></a>
            </div>
            <div class="btn-navegacion" id="siguiente"><i class="icofont-caret-right"></i></div>
@@ -31,45 +31,47 @@
 
         <section id="etapa-1" class="panel-preguntas h-100 container-fluid" data-position="1">
             <div class="container-pregunta">
-                <div class="etapas-bg-lines container-fluid h-100">   
-                    <div class="row align-items-center h-100">
-                        <div class="col-md-5">
+                <div class="container-fluid h-100">  
+                    <div class="shadow-etapas"></div>
+                    <div class="bg-etapas"></div>
+                    <div class="row align-items-center text-contenido-p">
+                        <div class="col-md-5 col-sm-4">
                             <div class="imagen-izquierda">
-                                <img src="./img/imagen-preguntas.png" class="img-fluid fondo-interrogacion">
+                                <img src="./img/etapa1-left.png" class="img-fluid fondo-interrogacion">
                                 <img src="./img/icon-interrogacion.png" class="img-fluid signo-interrogacion">
                             </div>
                         </div>
 
-                        <div class="col-md-7">
+                        <div class="col-md-7 col-sm-8" >
                             <div class="detalle-pregunta">
                                 <p>Soy de los que arma y desarma equipos electrónicos desde niño</p>
 
                                 <div class="options row">
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">01
                                             <input type="radio" checked="checked" value="1" name="etapa-1">
                                             <span class="circle-check"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">02
                                             <input type="radio" value="2" name="etapa-1">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">03
                                             <input type="radio" value="3" name="etapa-1">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">04
                                             <input type="radio" value="4" name="etapa-1">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">05
                                             <input type="radio" value="5" name="etapa-1">
                                             <span class="circle-check"></span>
@@ -79,59 +81,60 @@
 
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-                <div class="bg-etapas"></div>
+                
             </div>
         </section>
 
 
         <section id="etapa-2" class="panel-preguntas h-100 container-fluid" data-position="2">
             <div class="container-pregunta">
-                <div class="etapas-bg-lines container-fluid h-100">   
-                    <div class="row align-items-center h-100">
-                        <div class="col-md-5">
+                <div class="container-fluid h-100">
+                    <div class="shadow-etapas"></div>
+                    <div class="bg-etapas"></div>   
+                    <div class="row align-items-center text-contenido-p">
+                        <div class="col-md-5 col-sm-4">
                             <div class="imagen-izquierda">
                                 <img src="./img/etapa2-left.png" class="img-fluid fondo-interrogacion">
                                 <img src="./img/icon-interrogacion.png" class="img-fluid signo-interrogacion">
                             </div>
                         </div>
 
-                        <div class="col-md-7">
+                        <div class="col-md-7 col-sm-8">
                             <div class="detalle-pregunta">
                                 <p>Me gusta solucionar los conflictos que se presentan entre mis amigos.</p>
 
                                 <div class="options row">
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">01
                                             <input type="radio" checked="checked" value="1" name="etapa-2">
                                             <span class="circle-check"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">02
                                             <input type="radio" value="2" name="etapa-2">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">03
                                             <input type="radio" value="3" name="etapa-2">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">04
                                             <input type="radio" value="4" name="etapa-2">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">05
                                             <input type="radio" value="5" name="etapa-2">
                                             <span class="circle-check"></span>
-                                          </label>
+                                        </label>
                                     </div>
                                 </div>
 
@@ -140,51 +143,53 @@
                         
                     </div>
                 </div>
-                <div class="bg-etapas"></div>
+      
             </div>
         </section>
 
         <section id="etapa-3" class="panel-preguntas h-100 container-fluid" data-position="3">
             <div class="container-pregunta">
-                <div class="etapas-bg-lines container-fluid h-100">   
-                    <div class="row align-items-center h-100">
-                        <div class="col-md-5">
+                <div class="container-fluid h-100"> 
+                    <div class="shadow-etapas"></div>
+                    <div class="bg-etapas"></div>     
+                    <div class="row align-items-center text-contenido-p">
+                        <div class="col-md-5 col-sm-4">
                             <div class="imagen-izquierda">
                                 <img src="./img/etapa3-left.png" class="img-fluid fondo-interrogacion">
                                 <img src="./img/icon-interrogacion.png" class="img-fluid signo-interrogacion">
                             </div>
                         </div>
 
-                        <div class="col-md-7">
+                        <div class="col-md-7 col-sm-8">
                             <div class="detalle-pregunta">
                                 <p>Me gusta tomar la palabra en diferentes discusiones y convencer a la gente.</p>
 
                                 <div class="options row">
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">01
                                             <input type="radio" checked="checked" value="1" name="etapa-3">
                                             <span class="circle-check"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">02
                                             <input type="radio" value="2" name="etapa-3">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">03
                                             <input type="radio" value="3" name="etapa-3">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">04
                                             <input type="radio" value="4" name="etapa-3">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">05
                                             <input type="radio" value="5" name="etapa-3">
                                             <span class="circle-check"></span>
@@ -197,51 +202,52 @@
                         
                     </div>
                 </div>
-                <div class="bg-etapas"></div>
             </div>
         </section>
 
         <section id="etapa-4" class="panel-preguntas h-100 container-fluid" data-position="4">
             <div class="container-pregunta">
-                <div class="etapas-bg-lines container-fluid h-100">   
-                    <div class="row align-items-center h-100">
-                        <div class="col-md-5">
+                <div class="container-fluid h-100"> 
+                    <div class="shadow-etapas"></div>
+                    <div class="bg-etapas"></div>  
+                    <div class="row align-items-center text-contenido-p">
+                        <div class="col-md-5 col-sm-4">
                             <div class="imagen-izquierda">
                                 <img src="./img/etapa4-left.png" class="img-fluid fondo-interrogacion">
                                 <img src="./img/icon-interrogacion.png" class="img-fluid signo-interrogacion">
                             </div>
                         </div>
 
-                        <div class="col-md-7">
+                        <div class="col-md-7 col-sm-8">
                             <div class="detalle-pregunta">
                                 <p>Conozco todo sobre las computadoras.</p>
 
                                 <div class="options row">
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">01
                                             <input type="radio" checked="checked" value="1" name="etapa-4">
                                             <span class="circle-check"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">02
                                             <input type="radio" value="2" name="etapa-4">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">03
                                             <input type="radio" value="3" name="etapa-4">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">04
                                             <input type="radio" value="4" name="etapa-4">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">05
                                             <input type="radio" value="5" name="etapa-4">
                                             <span class="circle-check"></span>
@@ -254,51 +260,53 @@
                         
                     </div>
                 </div>
-                <div class="bg-etapas"></div>
+   
             </div>
         </section>
 
         <section id="etapa-5" class="panel-preguntas h-100 container-fluid" data-position="5">
             <div class="container-pregunta">
-                <div class="etapas-bg-lines container-fluid h-100">   
-                    <div class="row align-items-center h-100">
-                        <div class="col-md-5">
+                <div class="container-fluid h-100"> 
+                    <div class="shadow-etapas"></div>
+                    <div class="bg-etapas"></div>   
+                    <div class="row align-items-center text-contenido-p">
+                        <div class="col-md-5 col-sm-4">
                             <div class="imagen-izquierda">
                                 <img src="./img/etapa5-left.png" class="img-fluid fondo-interrogacion">
                                 <img src="./img/icon-interrogacion.png" class="img-fluid signo-interrogacion">
                             </div>
                         </div>
 
-                        <div class="col-md-7">
+                        <div class="col-md-7 col-sm-8">
                             <div class="detalle-pregunta">
                                 <p>Me gustaría realizar estudios sobre el funcionamiento del cerebro.</p>
 
                                 <div class="options row">
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">01
                                             <input type="radio" checked="checked" value="1" name="etapa-5">
                                             <span class="circle-check"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">02
                                             <input type="radio" value="2" name="etapa-5">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">03
                                             <input type="radio" value="3" name="etapa-5">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">04
                                             <input type="radio" value="4" name="etapa-5">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">05
                                             <input type="radio" value="5" name="etapa-5">
                                             <span class="circle-check"></span>
@@ -311,51 +319,53 @@
                         
                     </div>
                 </div>
-                <div class="bg-etapas"></div>
+
             </div>
         </section>
 
         <section id="etapa-6" class="panel-preguntas h-100 container-fluid" data-position="6">
             <div class="container-pregunta">
-                <div class="etapas-bg-lines container-fluid h-100">   
-                    <div class="row align-items-center h-100">
-                        <div class="col-md-5">
+                <div class="container-fluid h-100">  
+                    <div class="shadow-etapas"></div>
+                    <div class="bg-etapas"></div>    
+                    <div class="row align-items-center text-contenido-p">
+                        <div class="col-md-5 col-sm-4">
                             <div class="imagen-izquierda">
                                 <img src="./img/etapa6-left.png" class="img-fluid fondo-interrogacion">
                                 <img src="./img/icon-interrogacion.png" class="img-fluid signo-interrogacion">
                             </div>
                         </div>
 
-                        <div class="col-md-7">
+                        <div class="col-md-7 col-sm-8">
                             <div class="detalle-pregunta">
-                                <p>Conozco todo sobre las computadoras.</p>
+                                <p>En el futuro me gustaría expresarme mediante una actividad creativa como: la pintura, el dibujo, la escultura, el baile o el canto.</p>
 
                                 <div class="options row">
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">01
                                             <input type="radio" checked="checked" value="1" name="etapa-6">
                                             <span class="circle-check"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">02
                                             <input type="radio" value="2" name="etapa-6">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">03
                                             <input type="radio" value="3" name="etapa-6">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">04
                                             <input type="radio" value="4" name="etapa-6">
                                             <span class="circle-check"></span>
                                           </label>
                                     </div>
-                                    <div class="col-md">
+                                    <div class="col-sm">
                                         <label class="label-pregunta">05
                                             <input type="radio" value="5" name="etapa-6">
                                             <span class="circle-check"></span>
@@ -365,19 +375,68 @@
 
                             </div>
                         </div>
-                        
                     </div>
+                    
                 </div>
-                <div class="bg-etapas"></div>
+    
             </div>
         </section>
         
     </main>
 
+<!-- MODAL MAPA -->
+<div class="modal fade modal-mapa" id="mapa" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contenedor-mapa">
+                        <img src="./img/mapa-purple.png" class="img-fluid img-mapa"> 
+
+                        <div class="niveles-mapa">
+                            <span class="etapa-realizada">1</span>
+                            <span class="etapa-realizada">2</span>
+                            <span class="etapa-realizada">3</span>
+                            <span class="etapa-realizada">4</span>
+                            <span class="etapa-realizada etapa-active">5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+
+               
+                        <div class="iconos-modal">
+                            <button type="button" class="close close-mapa" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            <button class="play-button">
+                                <span class="circle-icon"><i class="icofont-ui-play"></i></span>
+                            </button>
+                        </div>
+
+                        <div class="marca-titulo">
+                            <p>mapa</p>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+<!-- FIN MAPA -->
+
     <script src="uploads/jquery/jquery.min.js"></script>
     <script src="uploads/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="uploads/jquery.easing/jquery.easing.min.js"></script>
     <script src="uploads/aos/aos.js"></script>
+    <script src="uploads/animation3d/twwemax.min.js"></script>
 
     <script src="./js/main.js"></script>
 
