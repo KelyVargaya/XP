@@ -23,7 +23,7 @@
         <div class="controles">
             <div class="top-iconos">
                 <a href="#" type="button" data-toggle="modal" data-target="#mapa"><i class="icofont-google-map"></i></a>
-                <a href="#"><i class="icofont-question"></i></a>
+                <a href="#" type="button" data-toggle="modal" data-target="#dudas"><i class="icofont-question"></i></a>
            </div>
            <div class="btn-navegacion" id="siguiente"><i class="icofont-caret-right"></i></div>
 
@@ -431,6 +431,100 @@
     </div>
   </div>
 <!-- FIN MAPA -->
+
+<!-- MODAL DUDAS -->
+
+<div class="modal fade modal-dudas" id="dudas" tabindex="-1" role="dialog" aria-labelledby="Dudas" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close close-dudas" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+           
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <ul id="tabs" class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a id="como-funciona-tab" href="#como-funciona" class="nav-link active" data-toggle="tab" role="tab">¿Cómo funciona?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="como-inicia-tab" href="#como-inicia" class="nav-link" data-toggle="tab" role="tab">¿Cómo inicia?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="como-guarda-tab" href="#como-guarda" class="nav-link" data-toggle="tab" role="tab">¿Cómo guarda?</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="content" class="tab-content" role="tablist">
+                            <div id="como-funciona" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="como-funciona">
+                                <div class="card-header" role="tab" id="titulo-como-funciona">
+                                    <h5 class="mb-0">
+                                        <a data-toggle="collapse" href="#como-funciona-x" aria-expanded="true" aria-controls="como-funciona-x">
+                                            ¿Cómo funciona?
+                                        </a>
+                                    </h5>
+                                </div>
+        
+                                <div id="como-funciona-x" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="titulo-como-funciona">
+                                    <div class="card-body">
+                                        <p>Bienvenido a esta aventura intergaláctica en busca del mejor lugar para tu talento. Xplonautas es un viaje que te ayudará a descubrir tu verdadera vocación conociéndote mejor.
+                                            Es necesario que contestes con la mayor sinceridad para que tu viaje obtenga los mejores resultados.</p>
+                                        <p>¿Estás listo para descubrir tu mundo profesional?</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div id="como-inicia" class="card tab-pane fade" role="tabpanel" aria-labelledby="como-inicia">
+                                <div class="card-header" role="tab" id="titulo-como-inicia">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" href="#como-inicia-x" aria-expanded="false" aria-controls="como-inicia-x">
+                                            ¿Cómo Inicia?
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="como-inicia-x" class="collapse" data-parent="#content" role="tabpanel" aria-labelledby="titulo-como-inicia">
+                                    <div class="card-body">
+                                       <p>Tu viaje empieza en nuestro observatorio donde nuestra comandante te dará la bienvenida e instrucciones y claro te evaluará para saber si eres apto para realizar esta aventura.</p>
+                                       <p>Dale click a comenzar para dar inicio a este gran viaje de descubrimiento que te dará a conocer tu mundo profesional.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div id="como-guarda" class="card tab-pane fade" role="tabpanel" aria-labelledby="como-guarda">
+                                <div class="card-header" role="tab" id="titulo-como-guarda">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" href="#como-guarda-x" aria-expanded="false" aria-controls="como-guarda-x">
+                                            ¿Cómo guarda?
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="como-guarda-x" class="collapse" role="tabpanel" data-parent="#content" aria-labelledby="titulo-como-guarda">
+                                    <div class="card-body">
+                                       <p>Tranquilo Xplonauta, tus resultados se van guardando de manera automática mientras avanzas en la aventura, eso quiere decir que si deseas tomarte un descanso, lo puedes hacer sin temor a perder lo avanzado, ya que cuando vuelvas, empezarás donde dejaste la aventura.</p>
+                                        <p>Buena suerte en descubrir tu potencial Xplonauta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            
+            
+                
+            </div>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+
+<!-- FIN DUDAS -->
+
 
     <script src="uploads/jquery/jquery.min.js"></script>
     <script src="uploads/bootstrap/js/bootstrap.bundle.min.js"></script>
