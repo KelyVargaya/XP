@@ -689,7 +689,7 @@ button.play-button {
   outline: 0;
 }
 .modal-backdrop{
-  background-color: rgb(0 0 0 / 45%);
+  background-color: rgb(59 59 59 / 30%);
   backdrop-filter: blur(3px);
 }
 .modal-backdrop.show {
@@ -863,6 +863,7 @@ button.play-button{
   font-size: 45px;
   opacity: 0.9;
 }
+
 @keyframes fade-item {
   from {
     opacity:0;
@@ -912,6 +913,155 @@ to {
   background: radial-gradient(circle, rgba(255,233,70,1) 0%, rgba(255,138,89,1) 79%, rgba(197,86,205,1) 100%);
   box-shadow: inset 0px 2px 2px #fb73f5;
 }
+/* Fin modal MAPA */
+
+/* DUDAS MODAL */
+.nav-tabs {
+  display:none;
+}
+
+.modal-dudas .modal-content{
+  background-color: rgb(0 12 38 / 30%);
+  border: 1px solid rgb(243 216 253 / 9%) !important;
+  border-radius: 0 !important;
+  padding: 4% 4%;
+  backdrop-filter: blur(16px);
+}
+.modal-dudas .card{
+  background-color: rgb(255 255 255 / 0%) !important;
+}
+.modal-dudas .card-body{
+  padding-left: 12%;
+}
+.modal-dudas .card p{
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.modal-dudas ul .nav-item{
+  margin-top: 28px;
+  margin-bottom: 28px
+}
+.modal-dudas ul .nav-item a, .modal-dudas .card-header{
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(18px 0, 100% 0%, 100% 100%, 0% 100%);
+    background-color: rgb(255 255 255 / 15%);
+    border: 0;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 19px;
+    padding: 20px 0;
+    border: 0;
+    transition: 500ms;
+    position: relative;
+}
+.modal-dudas .card-header{
+  margin-bottom: 28px;
+  margin-top: 28px;
+}
+.modal-dudas .card-header a{
+  text-align: center;
+  color: #ffffff;
+  font-size: 19px;
+    padding: 20px 0;
+    text-decoration: none;
+}
+button.close.close-dudas{
+  display: inherit;
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  opacity: 1;
+
+}
+button.close.close-dudas span{
+  width: 36px;
+    height: 36px;
+    background: #8455c0;
+    border-radius: 50%;
+    line-height: 31px;
+    color: #ffffff;
+}
+.modal-dudas .card-header a[aria-expanded="true"], .modal-dudas .card-header a:hover{
+  border: 0;
+  text-shadow: 8px 12px 25px #934fed, -12px 8px 25px #934fed, -8px -10px 25px #934fed, 10px -8px 25px #934fed, 8px 10px 25px #934fed, -10px 8px 25px #934fed, -8px -10px 25px #934fed, 10px -8px 25px #934fed ;
+}
+.modal-dudas ul#tabs:after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(250,243,252,0.7567401960784313) 22%, rgba(252,246,255,0.7763480392156863) 52%, rgba(251,244,254,0.7511379551820728) 89%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(
+180deg, rgba(255,255,255,0) 0%, rgba(250,243,252,0.7567401960784313) 22%, rgba(252,246,255,0.7763480392156863) 52%, rgba(251,244,254,0.7511379551820728) 89%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+180deg, rgba(255,255,255,0) 0%, rgb(250 243 252 / 35%) 22%, rgb(252 246 255 / 53%) 52%, rgb(251 244 254 / 41%) 89%, rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+.modal-dudas .nav-tabs .nav-link.active, .modal-dudas .nav-tabs .nav-link:hover {
+  color: #ffffff;
+  background-color: rgb(255 255 255 / 10%);
+  border: 0;
+  text-shadow: 8px 12px 25px #934fed, -12px 8px 25px #934fed, -8px -10px 25px #934fed, 10px -8px 25px #934fed, 8px 10px 25px #934fed, -10px 8px 25px #934fed, -8px -10px 25px #934fed, 10px -8px 25px #934fed ;
+}
+.modal-dudas .nav-tabs .nav-link.active:after, .modal-dudas .nav-tabs .nav-link.active:before, 
+.modal-dudas .card-header a[aria-expanded="true"]:after, .modal-dudas .card-header a[aria-expanded="true"]:before {
+  content: "";
+  width: 66%;
+  height: 2px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(250,243,252,0.6502976190476191) 22%, rgba(252,246,255,0.6867121848739496) 52%, rgba(251,244,254,0.6250875350140056) 89%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(250,243,252,0.6502976190476191) 22%, rgba(252,246,255,0.6867121848739496) 52%, rgba(251,244,254,0.6250875350140056) 89%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(250,243,252,0.6502976190476191) 22%, rgba(252,246,255,0.6867121848739496) 52%, rgba(251,244,254,0.6250875350140056) 89%, rgba(255,255,255,0) 100%);
+}
+.modal-dudas .nav-tabs .nav-link.active:after, .modal-dudas .card-header a[aria-expanded="true"]:after {
+  top: -1px;
+}
+.modal-dudas .nav-tabs .nav-link.active:before, .modal-dudas .card-header a[aria-expanded="true"]:before {
+  bottom: -1px;
+}
+.modal-dudas  .nav-tabs {
+  border-bottom: 0;
+  border-right: 0;
+  padding: 35px 0px;
+  position: relative;
+}
+@media(min-width:768px) {
+  .modal-dudas .nav-tabs {
+    display: block;
+  }
+  .modal-dudas .card {
+    border: none;
+  }
+  .modal-dudas .card .card-header {
+    display:none;
+  }  
+  .modal-dudas .card .collapse{
+    display:block;
+  }
+}
+
+@media(max-width:767px){
+  .modal-dudas .tab-content .tab-pane {
+    display: block !important;
+    opacity: 1;
+    border: 0;
+  }
+  .modal-dudas .card-body {
+    padding: 2px 20px 18px !important;
+}
+}
+
 @media (min-width: 1600px){
   .contenedor-mapa .niveles-mapa span {
     width: 34px;
@@ -925,7 +1075,8 @@ to {
   }
 }
 @media (min-width: 576px){
-  .modal-mapa .modal-dialog {
+  .modal-mapa .modal-dialog,
+  .modal-dudas .modal-dialog{
     max-width: 70%;
   }
 }
@@ -1012,4 +1163,15 @@ to {
     font-size: 6px;
   }
 }
-
+@media (max-width: 575px){
+  .modal-dudas .modal-content {
+    padding: 18px 0;
+  }
+  .modal-dudas .modal-dialog{
+    width: 90%;
+    margin: 26px auto;
+  }
+  .modal-dudas .card p {
+    font-size: 15px;
+  }
+}
